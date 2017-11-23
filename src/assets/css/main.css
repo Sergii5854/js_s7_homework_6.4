@@ -8,7 +8,7 @@ body {
 
 
 .main{
-  margin: auto;
+  margin: 20px auto;
   position: relative;
   display: block;
   height: 600px;
@@ -78,6 +78,8 @@ body {
   border-radius:20px;
   transition: .3s;
   padding: 20px 5px;
+  color: white;
+  font-weight: 700;
   white-space: nowrap;
 
 }
@@ -86,9 +88,18 @@ body {
 }
 .btn:hover{
   background-color:lawngreen;
+  cursor: pointer;
 }
 
 #b{
   margin-left:10px;
   margin-right:10px;
+}
+input[type="button"]{
+  margin: 0 30px;
+}
+p{
+  color: #fff;
+  font-weight: 700;
+  font-size: 18px;
 }
