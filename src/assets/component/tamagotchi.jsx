@@ -1,11 +1,12 @@
 import React, {PropTypes,  Component } from 'react';
 
-import hello from './../sprite/hello.png';
 
 export default class Tamagotchi extends Component {
   constructor(props) {
     super(props)
+    this.name = prompt("What is your Pet name ?", "Malush");
   }
+
 
 
   render() {
@@ -14,7 +15,7 @@ export default class Tamagotchi extends Component {
           <div class="container">
             <div class="inner-container">
               <div class="display" id="display">
-                <p>name</p>
+                <p>{this.name}</p>
 
                 <div class="hi"></div>
               </div>
