@@ -7,15 +7,16 @@ export default class GifActions extends Component {
     super(props)
 
     this.state = {
-      color_black: true,
-      label: true,
+
       labelA: true,
       colorA: false,
+
       labelB: true,
       colorB: false,
+
       labelC: true,
-      colorC: false,
-    }
+      colorC: false
+    };
 
 
     this.sleep = this.sleep.bind(this)
@@ -56,6 +57,8 @@ export default class GifActions extends Component {
     let click3 =  this.state.labelC ? 'Watch' : 'Go gym'
     return (
       <div>
+
+
 
         <div className="controls">
           <button id="a" className="btn" style={{backgroundColor: bgColor}} onClick={this.sleep} >{click}</button>
