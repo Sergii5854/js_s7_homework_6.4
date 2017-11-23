@@ -1,5 +1,6 @@
 import React, {PropTypes,  Component } from 'react';
-
+// import Audio from './audio';
+import GifAction from './gif';
 
 export default class Tamagotchi extends Component {
   constructor(props) {
@@ -13,6 +14,8 @@ export default class Tamagotchi extends Component {
   render() {
     return (
         <div class="main">
+          {/*<Audio />*/}
+
           <div class="container">
             <div class="inner-container">
               <div class="display" id="display">
@@ -21,13 +24,9 @@ export default class Tamagotchi extends Component {
                 <p>bellyful : {this.bellyful}</p>
 
                 <div class="hi"></div>
+              <GifAction />
+              </div>
 
-              </div>
-              <div class="controls">
-                <div class="btn" id="a">Action1</div>
-                <div class="btn" id="b">Action2</div>
-                <div class="btn" id="c">Action3</div>
-              </div>
 
             </div>
           </div>
