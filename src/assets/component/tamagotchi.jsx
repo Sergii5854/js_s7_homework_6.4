@@ -1,5 +1,5 @@
 import React, {PropTypes,  Component } from 'react';
-// import Audio from './audio';
+import Audio from './audio';
 import GifAction from './gif';
 
 export default class Tamagotchi extends Component {
@@ -14,7 +14,7 @@ export default class Tamagotchi extends Component {
   render() {
     return (
         <div class="main">
-          {/*<Audio />*/}
+          <Audio />
 
           <div class="container">
             <div class="inner-container">

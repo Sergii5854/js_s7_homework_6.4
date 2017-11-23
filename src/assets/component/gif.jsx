@@ -1,6 +1,10 @@
 import React, {Component } from 'react';
-import gif1 from './../gif/feed.gif'
-import gif2 from './../gif/funk.gif'
+import gif1 from './../gif/feed.gif';
+import gif2 from './../gif/funk.gif';
+import gif3 from './../gif/internet.gif';
+import gif4 from './../gif/sleeping.gif';
+import gif5 from './../gif/study.gif';
+import gif6 from './../gif/watchingTV.gif';
 
 export default class GifActions extends Component {
   constructor(props) {
@@ -10,6 +14,7 @@ export default class GifActions extends Component {
 
       labelA: true,
       colorA: false,
+      actionA: true,
 
       labelB: true,
       colorB: false,
@@ -28,7 +33,8 @@ export default class GifActions extends Component {
   sleep() {
     this.setState({
       colorA: !this.state.colorA,
-      labelA: !this.state.labelA
+      labelA: !this.state.labelA,
+      action: !this.state.actionA
     })
   }
 
@@ -58,7 +64,9 @@ export default class GifActions extends Component {
     return (
       <div>
 
-
+        <div className="gifsBlock">
+          {this.actionA}
+        </div>
 
         <div className="controls">
           <button id="a" className="btn" style={{backgroundColor: bgColor}} onClick={this.sleep} >{click}</button>
