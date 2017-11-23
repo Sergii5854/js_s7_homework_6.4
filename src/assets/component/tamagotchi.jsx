@@ -14,7 +14,7 @@ export default class Tamagotchi extends Component {
   render() {
     return (
         <div class="main">
-          <Audio />
+
 
           <div class="container">
             <div class="inner-container">
@@ -30,6 +30,7 @@ export default class Tamagotchi extends Component {
 
             </div>
           </div>
+          <Audio />
         </div>
     );
   }
