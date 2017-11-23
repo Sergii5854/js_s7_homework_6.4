@@ -6,9 +6,13 @@
   margin: auto;
 }
 
-
-
 @keyframes play {
   from { background-position:    0px; }
   to { background-position: -500px; }
+}
+
+
+.gif-container img{
+  position: relative;
+  max-width: 270px;
 }

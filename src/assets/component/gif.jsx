@@ -18,9 +18,11 @@ export default class GifActions extends Component {
 
       labelB: true,
       colorB: false,
+      actionB: true,
 
       labelC: true,
-      colorC: false
+      colorC: false,
+      actionC: true,
     };
 
 
@@ -34,38 +36,50 @@ export default class GifActions extends Component {
     this.setState({
       colorA: !this.state.colorA,
       labelA: !this.state.labelA,
-      action: !this.state.actionA
+      actionA: !this.state.actionA
     })
+    let action = this.state.actionA ? gif1 : gif1;
+    document.getElementById("gif").src = action;
   }
 
   eat() {
     this.setState({
       colorB: !this.state.colorB,
-      labelB: !this.state.labelB
+      labelB: !this.state.labelB,
+      actionB: !this.state.actionB
     })
+    let action2 = this.state.actionB ? gif4 : gif3;
+    document.getElementById("gif").src = action2;
   }
 
   watchTV() {
     this.setState({
       colorC: !this.state.colorC,
-      labelC: !this.state.labelC
+      labelC: !this.state.labelC,
+      actionC: !this.state.actionC
     })
+    let action3 = this.state.actionC ? gif5 : gif6;
+    document.getElementById("gif").src = action3;
   }
 
   render() {
-    let bgColor = this.state.colorA ? "red" : "green"
-    let click =  this.state.labelA ? 'Sleep' : 'Awake'
+    let bgColor = this.state.colorA ? "red" : "green";
+    let click =  this.state.labelA ? 'Sleep' : 'Awake';
+     let action = this.state.actionA ? gif1 : gif2;
 
-    let bgColor2 = this.state.colorB ? "red" : "green"
-    let click2 =  this.state.labelB? 'Eat' : 'Play'
+    let bgColor2 = this.state.colorB ? "red" : "green";
+    let click2 =  this.state.labelB? 'Eat' : 'Play';
+    let action2 = this.state.actionB ? gif3 : gif4;
 
-    let bgColor3 = this.state.colorC ? "red" : "green"
-    let click3 =  this.state.labelC ? 'Watch' : 'Go gym'
+    let bgColor3 = this.state.colorC ? "red" : "green";
+    let click3 =  this.state.labelC ? 'Watch' : 'Go gym';
+    let action3 = this.state.actionC ? gif5 : gif6;
     return (
       <div>
 
-        <div className="gifsBlock">
-          {this.actionA}
+        <div className="gif-container">
+          <img id="gif" className="active" src={action} />
+
         </div>
 
         <div className="controls">
