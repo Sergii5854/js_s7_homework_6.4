@@ -1,24 +1,27 @@
 import React, {PropTypes,  Component } from 'react';
 
+import hello from './../sprite/hello.png';
+
 export default class Tamagotchi extends Component {
   constructor(props) {
     super(props)
-
   }
 
 
   render() {
     return (
+        <div class="main">
+          <div class="container">
+            <div class="inner-container">
+              <div class="display" id="display">
+                <p>name</p>
 
-        <div id="contenedor">
-          <div class="carcasa">
-            <div class="carcasaInterna">
-              <div id="lcd">
+                <div class="hi"></div>
               </div>
-              <div class="botones">
-                <div class="boton" id="a"></div>
-                <div class="boton" id="b"></div>
-                <div class="boton" id="c"></div>
+              <div class="controls">
+                <div class="btn" id="a">Action1</div>
+                <div class="btn" id="b">Action2</div>
+                <div class="btn" id="c">Action3</div>
               </div>
             </div>
           </div>
