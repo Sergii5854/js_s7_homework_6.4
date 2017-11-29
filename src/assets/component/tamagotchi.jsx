@@ -1,4 +1,4 @@
-import React, {PropTypes,  Component } from 'react';
+import React, {PropTypes, Component} from 'react';
 import Audio from './audio';
 import GifAction from './gif';
 
@@ -15,10 +15,10 @@ export default class Tamagotchi extends Component {
           <div class="container">
             <div class="inner-container">
               <div class="display" id="display">
-                <p>name :  {this.name}</p>
+                <p>name : {this.name}</p>
 
                 <div class="hi"></div>
-              <GifAction />
+                <GifAction />
               </div>
             </div>
           </div>
