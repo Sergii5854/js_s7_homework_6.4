@@ -4,7 +4,7 @@
 
 This web app allows users to play the tamagotchi game. 
 
-H3 Prerequisites
+### Prerequisites
 
 You will need the following things properly installed on your computer:
 
@@ -18,9 +18,11 @@ Node.js (with NPM)
  * `$ git clone https://github.com/Sergii5854/js_s7_homework_6.4`
  * `$ cd js_s7_homework_6.4`
  * `$ npm install`
+ 
+### Run App
 
  * `$  npm start`
 
 ### Technologies Used
 
-React.js, JavaScript, CSS, HTML
+React.js, JavaScript, CSS, HTML#

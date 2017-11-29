@@ -1,5 +1,5 @@
 import React, {Component } from 'react';
-import audio from './../audio/audio.mp3'
+import audio from '../../assets/audio/audio.mp3'
 
 export default class Audio extends Component {
   constructor(props) {
@@ -67,8 +67,6 @@ export default class Audio extends Component {
                     type="range"
                     name="points"
                     min="0" max={this.state.duration} /> </p>
-
-
         </div>
     );
   }

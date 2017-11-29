@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import logo from '../../logo.svg';
 import './App.css';
-import Tamagotchi from "./assets/component/tamagotchi";
+import Tamagotchi from "./../Tamagotchi/tamagotchi.js";
 
 class App extends Component {
   render() {
@@ -11,8 +11,6 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React Tamagotchi</h1>
         </header>
-
-
         <Tamagotchi />
       </div>
     );

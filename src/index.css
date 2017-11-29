@@ -1,2 +1,5 @@
-@import 'assets/css/main.css';
-@import 'assets/css/animation.css';
+@import 'components/welcome/welcome.scss';
+@import 'components/audio/audio.scss';
+@import 'components/Tamagotchi/tamagotchi.scss';
+@import 'components/gif/controls.scss';
+
