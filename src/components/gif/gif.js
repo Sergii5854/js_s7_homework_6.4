@@ -14,10 +14,12 @@ export default class GifActions extends Component {
 
       isHidden: false,
       tamagotchiName: null,
+      // propForGif : null,
 
       labelSleep: true,
       colorSleep: false,
       gifSleep: true,
+
 
       labelEat: true,
       colorEat: false,
@@ -43,7 +45,10 @@ export default class GifActions extends Component {
       gifSleep: !this.state.gifSleep
     })
     let actionBtnSleep = this.state.gifSleep ? gif1 : gif2;
-    document.getElementById('gif').src = actionBtnSleep
+    document.getElementById('gif').src = actionBtnSleep;
+
+    // this.setState({propForGif: {propForGif: this.state.propForGif = gif2 ? this.state.propForGif = gif1: this.state.propForGif = gif2 }})
+
   }
 
   eat() {
@@ -54,6 +59,7 @@ export default class GifActions extends Component {
     })
     let actionBtnEat = this.state.gifEat ? gif3 : gif4;
     document.getElementById('gif').src = actionBtnEat
+    // this.setState({propForGif: this.state.propForGif = gif3  ? this.state.propForGif = gif3 : this.state.propForGif = gif4 })
   }
 
   watch() {
@@ -64,6 +70,7 @@ export default class GifActions extends Component {
     })
     let actionBtnWatch = this.state.gifWatch ? gif5 : gif6;
     document.getElementById('gif').src = actionBtnWatch
+    // this.setState({propForGif: this.state.propForGif  = gif5  ? this.state.propForGif= gif5 : this.state.propForGif = gif6 })
   }
 
   handleChange(event) {
@@ -115,8 +122,8 @@ export default class GifActions extends Component {
                   type="text"
                   name="name"
                   placeholder="Tamagotchi Name"
-                  maxLength="30"
-                  minLength="1"
+                  maxLength="20"
+                  minLength="2"
                   onChange={this.handleChange}
               />
 
@@ -127,11 +134,18 @@ export default class GifActions extends Component {
             <p>name : {this.state.tamagotchiName}</p>
           </div>
 
-          <div className='gif-container'>
-            <img id='gif' className='active' alt=''/>
+          <div className='gif-container'
+               hidden={!this.state.isHidden}>
+            <img
+                id='gif'
+                className='active'
+                alt='Gif animation'
+
+            />
           </div>
 
-          <div className='controls'>
+          <div className='controls'
+               hidden={!this.state.isHidden}>
             <button className='btn'
                     style={{backgroundColor: bgColorBtnSleep}}
                     onClick={this.sleep}>
