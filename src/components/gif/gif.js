@@ -16,6 +16,15 @@ export default class GifActions extends Component {
       tamagotchiName: null,
       // propForGif : null,
 
+      sleap: 10,
+      spead: 10,
+
+      feed: 10,
+      happiness: 6,
+
+      work: 4,
+      relax: 8,
+
       labelSleep: true,
       colorSleep: false,
       gifSleep: true,
@@ -58,7 +67,7 @@ export default class GifActions extends Component {
       gifEat: !this.state.gifEat
     })
     let actionBtnEat = this.state.gifEat ? gif3 : gif4;
-    document.getElementById('gif').src = actionBtnEat
+    document.getElementById('gif').src = actionBtnEat;
     // this.setState({propForGif: this.state.propForGif = gif3  ? this.state.propForGif = gif3 : this.state.propForGif = gif4 })
   }
 
@@ -69,7 +78,7 @@ export default class GifActions extends Component {
       gifWatch: !this.state.gifWatch
     })
     let actionBtnWatch = this.state.gifWatch ? gif5 : gif6;
-    document.getElementById('gif').src = actionBtnWatch
+    document.getElementById('gif').src = actionBtnWatch;
     // this.setState({propForGif: this.state.propForGif  = gif5  ? this.state.propForGif= gif5 : this.state.propForGif = gif6 })
   }
 
@@ -87,12 +96,12 @@ export default class GifActions extends Component {
   handleSubmit(event) {
     event.preventDefault();
 
-     if(this.state.tamagotchiName !== null ) {
+    if (this.state.tamagotchiName !== null) {
       console.log(this.state.tamagotchiName);
 
       this.setState({isHidden: true});
       document.getElementById('gif').src = gif1;
-    }else {
+    } else {
       alert("Please set name to your tamagotchi")
     }
 
@@ -122,7 +131,7 @@ export default class GifActions extends Component {
                   type="text"
                   name="name"
                   placeholder="Tamagotchi Name"
-                  maxLength="20"
+                  maxLength="15"
                   minLength="2"
                   onChange={this.handleChange}
               />
@@ -131,7 +140,16 @@ export default class GifActions extends Component {
             </form>
 
 
-            <p>name : {this.state.tamagotchiName}</p>
+            <p className="stats">name : {this.state.tamagotchiName}</p>
+
+            <div className='stats__wrap' >
+              <p hidden={!this.state.isHidden} className="stats">sleap : {this.state.sleap}</p>
+              <p hidden={!this.state.isHidden} className="stats">spead : {this.state.spead}</p>
+              <p hidden={!this.state.isHidden} className="stats">feed : {this.state.feed}</p>
+              <p hidden={!this.state.isHidden} className="stats">happiness : {this.state.happiness}</p>
+              <p hidden={!this.state.isHidden} className="stats">work : {this.state.work}</p>
+              <p hidden={!this.state.isHidden} className="stats">relax : {this.state.relax}</p>
+            </div>
           </div>
 
           <div className='gif-container'
