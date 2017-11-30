@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from '../../logo.svg';
+import logo from '../../assets/logo/logo.svg';
 import './App.css';
 import Tamagotchi from "./../Tamagotchi/tamagotchi.js";
 

@@ -1,7 +1,7 @@
 import React, {PropTypes, Component} from 'react';
 import Audio from '../audio/audio';
-import Welcome from '../welcome/welcome';
-import GifAction from '../gif/gif';
+
+import Controls from '../gif/gif';
 
 export default class Tamagotchi extends Component {
   render() {
@@ -10,9 +10,8 @@ export default class Tamagotchi extends Component {
           <div className="container">
             <div className="inner-container">
               <div className="display" id="display">
-                <Welcome />
 
-                <GifAction />
+                <Controls />
               </div>
             </div>
           </div>

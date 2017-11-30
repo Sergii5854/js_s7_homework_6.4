@@ -8,6 +8,9 @@ export default class Audio extends Component {
     this.state = {
       duration: null
     }
+
+    this.handlePlay = this.handlePlay.bind(this);
+    this.handleStop = this.handleStop.bind(this);
   };
 
   handlePlay() {
@@ -55,13 +58,13 @@ export default class Audio extends Component {
           <input type="button"
                  value="Play"
                  className="btn"
-                 onClick={ this.handlePlay.bind(this) } />
+                 onClick={ this.handlePlay } />
 
           <input type="button"
                  value="Stop"
                  className="btn"
 
-                 onClick={ this.handleStop.bind(this) } />
+                 onClick={ this.handleStop } />
 
           <p><input ref={(slider) => { this.slider = slider }}
                     type="range"
