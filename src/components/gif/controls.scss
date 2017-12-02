@@ -4,7 +4,7 @@ Buttons
 
 __________________________________________________________________________________*/
 
-.controls{
+.controls {
   width: 100%;
   max-width: 300px;
   text-align: center;
@@ -13,30 +13,27 @@ ________________________________________________________________________________
   left: 0%;
 }
 
-
-.btn{
+.btn {
   min-width: 75px;
-
-  background-color:red;
-  display:inline-block;
-  border-top:5px solid #e6b800;
-  border-bottom:5px solid #e6b800;
-  border-left:5px solid #e6b800;
-  border-right:5px solid #e6b800;
-  border-radius:20px;
+  background-color: red;
+  display: inline-block;
+  border-top: 5px solid #e6b800;
+  border-bottom: 5px solid #e6b800;
+  border-left: 5px solid #e6b800;
+  border-right: 5px solid #e6b800;
+  border-radius: 20px;
   transition: .3s;
   padding: 20px 5px;
   color: white;
   font-weight: 700;
   white-space: nowrap;
-
-}
-.btn:focus{
-  outline: none;
-}
-.btn:hover{
-  background-color:lawngreen;
-  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    background-color: lawngreen;
+    cursor: pointer;
+  }
 }
 
 /*__________________________________________________________________________________
@@ -60,12 +57,15 @@ ________________________________________________________________________________
 }
 
 @keyframes play {
-  from { background-position:    0; }
-  to { background-position: -500px; }
+  from {
+    background-position: 0;
+  }
+  to {
+    background-position: -500px;
+  }
 }
 
-
-.gif-container img{
+.gif-container img {
   position: relative;
   max-width: 270px;
 }
@@ -76,25 +76,24 @@ Welcome Hi  end
 
 __________________________________________________________________________________*/
 
-
 /*__________________________________________________________________________________
 
 Stats
 
 __________________________________________________________________________________*/
 
-.stats__wrap{
+.stats__wrap {
   display: flex;
   flex-wrap: wrap;
   flex: 1 1 250px;
   padding: 10px 10px 5px 10px;
 }
 
-.stats{
+.stats {
   color: white;
   margin: 0;
   flex: 1 1 125px;
-  padding: 5px 0 ;
+  padding: 5px 0;
 }
 
 /*__________________________________________________________________________________
@@ -109,15 +108,15 @@ Messages block
 
 __________________________________________________________________________________*/
 
-.alert{
+.alert {
   color: red;
   margin: 0;
 
 }
 
-.info{
+.info {
   color: skyblue;
-  margin: 0;
-
+  margin: 0 auto;
   word-break: break-word;
+  max-width: 200px;
 }
