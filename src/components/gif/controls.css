@@ -3,15 +3,13 @@
 Buttons
 
 __________________________________________________________________________________*/
-
 .controls {
   width: 100%;
   max-width: 300px;
   text-align: center;
   position: absolute;
   top: 97%;
-  left: 0%;
-}
+  left: 0%; }
 
 .btn {
   min-width: 75px;
@@ -26,97 +24,79 @@ ________________________________________________________________________________
   padding: 20px 5px;
   color: white;
   font-weight: 700;
-  white-space: nowrap;
-  &:focus {
-    outline: none;
-  }
-  &:hover {
-        background-color: lawngreen;
-    cursor: pointer;
-  }
-}
+  white-space: nowrap; }
+  .btn:focus {
+    outline: none; }
+  .btn:hover {
+    background-color: lawngreen;
+    cursor: pointer; }
 
 /*__________________________________________________________________________________
 
 End Buttons
 
 __________________________________________________________________________________*/
-
 /*__________________________________________________________________________________
 
 Welcome Hi
 
 __________________________________________________________________________________*/
-
 .hi {
   width: 50px;
   height: 72px;
   background-image: url("../../assets/sprite/hello.png");
-  animation: play .8s steps(10) infinite;
-  margin: auto;
-}
+  animation: play 0.8s steps(10) infinite;
+  margin: auto; }
 
 @keyframes play {
   from {
-    background-position: 0;
-  }
+    background-position: 0; }
   to {
-    background-position: -500px;
-  }
-}
-
+    background-position: -500px; } }
 .gif-container img {
   position: relative;
-  max-width: 270px;
-}
+  max-width: 270px; }
 
 /*__________________________________________________________________________________
 
 Welcome Hi  end
 
 __________________________________________________________________________________*/
-
 /*__________________________________________________________________________________
 
 Stats
 
 __________________________________________________________________________________*/
-
 .stats__wrap {
   display: flex;
   flex-wrap: wrap;
   flex: 1 1 250px;
-  padding: 10px 10px 5px 10px;
-}
+  padding: 10px 10px 5px 10px; }
 
 .stats {
   color: white;
   margin: 0;
   flex: 1 1 125px;
-  padding: 5px 0;
-}
+  padding: 5px 0; }
 
 /*__________________________________________________________________________________
 
 Stats end
 
 __________________________________________________________________________________*/
-
 /*__________________________________________________________________________________
 
 Messages block
 
 __________________________________________________________________________________*/
-
 .alert {
   color: red;
-  margin: 0;
-
-}
+  margin: 0; }
 
 .info {
   color: skyblue;
   margin: 0 auto;
   word-break: break-word;
-  max-width: 200px;
-}
+  max-width: 200px; }
+
+/*# sourceMappingURL=controls.css.map */

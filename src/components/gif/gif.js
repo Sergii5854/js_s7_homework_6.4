@@ -11,9 +11,7 @@ export default class GifActions extends Component {
     super(props);
 
     this.state = {
-
       warn: '',
-
       sleapInfo: '',
       speadInfo: '',
       feedInfo: '',
@@ -23,29 +21,25 @@ export default class GifActions extends Component {
 
       isHidden: false,
       tamagotchiName: null,
-      // propForGif : null,
+      propForGif: false,
 
-      sleap: !undefined ? Math.floor(Math.random() * 100) + 20 : this.sleap,
-      spead: !undefined ? Math.floor(Math.random() * 100) + 20 : this.spead,
+      sleap: this.sleap ? this.sleap : Math.floor(Math.random() * 100) + 20,
+      spead: this.spead ? this.spead : Math.floor(Math.random() * 100) + 20,
 
-      feed: !undefined ? Math.floor(Math.random() * 100) + 20 : this.feed,
-      happiness: !undefined ? Math.floor(Math.random() * 100) + 20 : this.happiness,
+      feed: this.feed ? this.feed : Math.floor(Math.random() * 100) + 20,
+      happiness: this.happiness ? this.happiness : Math.floor(Math.random() * 100) + 20,
 
-      work: !undefined ? Math.floor(Math.random() * 100) + 20 : this.work,
-      relax: !undefined ? Math.floor(Math.random() * 100) + 20 : this.relax,
+      work: this.work ? this.work : Math.floor(Math.random() * 100) + 20,
+      relax: this.relax ? this.relax : Math.floor(Math.random() * 100) + 20,
 
       labelSleep: true,
       colorSleep: false,
-      gifSleep: true,
-
 
       labelEat: true,
       colorEat: false,
-      gifEat: true,
 
       labelWatch: true,
       colorWatch: false,
-      gifWatch: true
     };
 
     this.sleep = this.sleep.bind(this);
@@ -58,7 +52,6 @@ export default class GifActions extends Component {
   }
 
   controlsChange() {
-
     const DEAD = () => {
       this.setState({
         warn: "sorry, you are dead ",
@@ -69,7 +62,6 @@ export default class GifActions extends Component {
         window.location.reload()
       }, 2000);
     };
-
 //sleap
     if (this.state.sleap < 10) {
       this.setState({sleapInfo: " I want to sleap "})
@@ -97,7 +89,6 @@ export default class GifActions extends Component {
     if (this.state.feed <= 0) {
       DEAD()
     }
-
     //happiness
     if (this.state.happiness < 10) {
       this.setState({happinessInfo: " Please, play with me "})
@@ -107,8 +98,6 @@ export default class GifActions extends Component {
     if (this.state.happiness <= 0) {
       DEAD()
     }
-
-
     //work
     if (this.state.work < 10) {
       this.setState({workInfo: " we need to work "})
@@ -127,8 +116,6 @@ export default class GifActions extends Component {
     if (this.state.relax <= 0) {
       DEAD()
     }
-
-
   }
 
   sleep() {
@@ -144,17 +131,13 @@ export default class GifActions extends Component {
         happiness: this.state.happiness + Math.floor(Math.random() * 4) - 1
       })
     }
-
+    let actionBtnSleep = this.state.gifSleep ? gif1 : gif2;
     this.setState({
       labelSleep: !this.state.labelSleep,
       colorSleep: !this.state.colorSleep,
-      gifSleep: !this.state.gifSleep
+      gifSleep: !this.state.gifSleep,
+      propForGif: actionBtnSleep
     });
-
-    let actionBtnSleep = this.state.gifSleep ? gif1 : gif2;
-    document.getElementById('gif').src = actionBtnSleep;
-
-    // this.setState({propForGif: {propForGif: this.state.propForGif = gif2 ? this.state.propForGif = gif1: this.state.propForGif = gif2 }})
   }
 
   eat() {
@@ -174,15 +157,13 @@ export default class GifActions extends Component {
         happiness: this.state.happiness + Math.floor(Math.random() * 4) - 1
       })
     }
-
+    let actionBtnEat = this.state.gifEat ? gif3 : gif4;
     this.setState({
       labelEat: !this.state.labelEat,
       colorEat: !this.state.colorEat,
-      gifEat: !this.state.gifEat
-    })
-    let actionBtnEat = this.state.gifEat ? gif3 : gif4;
-    document.getElementById('gif').src = actionBtnEat;
-    // this.setState({propForGif: this.state.propForGif = gif3  ? this.state.propForGif = gif3 : this.state.propForGif = gif4 })
+      gifEat: !this.state.gifEat,
+      propForGif: actionBtnEat
+    });
   }
 
   watch() {
@@ -201,14 +182,13 @@ export default class GifActions extends Component {
         happiness: this.state.happiness + Math.floor(Math.random() * 4) - 1
       })
     }
+    let actionBtnWatch = this.state.gifWatch ? gif5 : gif6;
     this.setState({
       labelWatch: !this.state.labelWatch,
       colorWatch: !this.state.colorWatch,
-      gifWatch: !this.state.gifWatch
+      gifWatch: !this.state.gifWatch,
+      propForGif: actionBtnWatch
     })
-    let actionBtnWatch = this.state.gifWatch ? gif5 : gif6;
-    document.getElementById('gif').src = actionBtnWatch;
-    // this.setState({propForGif: this.state.propForGif  = gif5  ? this.state.propForGif= gif5 : this.state.propForGif = gif6 })
   }
 
   handleChange(event) {
@@ -245,7 +225,6 @@ export default class GifActions extends Component {
 
     let clickBtnWatch = this.state.labelWatch ? 'Watch' : 'Study';
     let bgColorBtnWatch = this.state.colorWatch ? 'blue' : 'purple';
-
 
     return (
         <div>
@@ -291,14 +270,13 @@ export default class GifActions extends Component {
           </div>
 
           <div className='gif-container'
+               src={this.propForGif}
                hidden={!this.state.isHidden}>
             <img
                 id='gif'
                 className='active'
                 alt='Gif animation'
-
-            />   {/* src={this.state.propForGif}*/}
-
+                src={this.state.propForGif}/>
           </div>
 
           <div className='controls'
